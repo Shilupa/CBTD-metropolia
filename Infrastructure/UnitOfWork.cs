@@ -18,6 +18,9 @@ namespace Infrastructure
         public IGenericRepository<Manufacturer> _Manufacturer;
         public IGenericRepository<Product> _Product;
         public IGenericRepository<ApplicationUser> _ApplicationUser;
+        public IGenericRepository<ShoppingCart> _ShoppingCart;
+        public IOrderHeaderRepository<OrderHeader> _OrderHeader;
+        public IGenericRepository<OrderDetails> _OrderDetail;
 
         //ADD ADDITIONAL MODELS HERE
 
@@ -76,6 +79,48 @@ namespace Infrastructure
                 return _ApplicationUser;
             }
         }
+
+        public IGenericRepository<ShoppingCart> ShoppingCart
+        {
+            get
+            {
+
+                if (_ShoppingCart == null)
+                {
+                    _ShoppingCart = new GenericRepository<ShoppingCart>(_dbContext);
+                }
+
+                return _ShoppingCart;
+            }
+        }
+
+        public IOrderHeaderRepository<OrderHeader> OrderHeader
+        {
+            get
+            {
+
+                if (_OrderHeader == null)
+                {
+                    _OrderHeader = new OrderHeaderRepository(_dbContext);
+                }
+
+                return _OrderHeader;
+            }
+        }
+
+        public IGenericRepository<OrderDetails> OrderDetails
+        {
+            get
+            {
+
+                if (_OrderDetail == null)
+                {
+                    _OrderDetail = new GenericRepository<OrderDetails>(_dbContext);
+                }
+
+                return _OrderDetail;
+            }
+        }
         //ADD ADDITIONAL METHODS FOR EACH MODEL (similar to Category) HERE
 
         public int Commit()
@@ -96,4 +141,3 @@ namespace Infrastructure
         }
     }
 }
-

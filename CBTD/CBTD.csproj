@@ -33,6 +33,8 @@
     <None Remove="Pages\Products\" />
     <None Remove="Pages\Users\" />
     <None Remove="Pages\Roles\" />
+    <None Remove="Pages\Cart\" />
+    <None Remove="ViewModel\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pages\Products\" />
@@ -40,6 +42,8 @@
     <Folder Include="wwwroot\images\products\" />
     <Folder Include="Pages\Users\" />
     <Folder Include="Pages\Roles\" />
+    <Folder Include="Pages\Cart\" />
+    <Folder Include="ViewModel\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.9" />

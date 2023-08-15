@@ -4,6 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using DataAccess.Models;
 
 namespace Infrastructure.Interfaces
 {
@@ -50,5 +51,10 @@ namespace Infrastructure.Interfaces
 
         // Update all changes to an object
         void Update(T entity);
+
+        // Increment and Decrement Shopping Cart
+        int IncrementCount(ShoppingCart shoppingCart, int count);
+        int DecrementCount(ShoppingCart shoppingCart, int count);
+
     }
 }

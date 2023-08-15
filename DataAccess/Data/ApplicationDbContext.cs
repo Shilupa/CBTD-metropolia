@@ -16,6 +16,10 @@ namespace DataAccess.Data
         public DbSet<Manufacturer> Manufacturers { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+        public DbSet<ApplicationUser> OrderHeaders { get; set; }
+        public DbSet<ApplicationUser> OrderDetails { get; set; }
+
+
         //insterting seed data when Model is physically created in the DB the first time
     }
 }
