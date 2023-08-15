@@ -17,7 +17,7 @@ namespace CBTD.Pages.Cart
     {
 
         private readonly UnitOfWork _unitOfWork;
-
+        [BindProperty]
         public ShoppingCartVM ShoppingCartVM { get; set; }
         public IndexModel(UnitOfWork unitOfWork)
         {

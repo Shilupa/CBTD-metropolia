@@ -51,7 +51,7 @@ namespace CBTD.Pages.Cart
                 ShoppingCartVM.OrderHeader.OrderTotal += cart.CartPrice * cart.Count;
 
             }
-            return RedirectToPage("Order Confirmation");
+            return Page();
         }
 
         public IActionResult OnPost()
@@ -103,6 +103,7 @@ namespace CBTD.Pages.Cart
             _unitOfWork.Commit();
             return Page();
         }
+
         private double GetPriceBasedOnQuantity(double quantity, double unitPrice, double priceHalfDozen, double priceDozen)
         {
             if (quantity <= 5)
@@ -118,5 +119,6 @@ namespace CBTD.Pages.Cart
                 return priceDozen;
             }
         }
+
     }
 }
